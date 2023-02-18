@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="assets/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Shopping Application | VUE JS</title>
+</head>
+<body>
+<div id="app">
+    <div class="nav-bar"></div>
+    <div class="cart">Cart ({{ cart.length }})</div>
+    <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+
+</div>
+
+<!--Import App-->
+<script src="main.js"></script>
+<!--Import Components-->
+<script src="components/ProductDisplay.js"></script>
+<script src="components/ReviewForm.js"></script>
+<script src="components/ReviewList.js"></script>
+
+<script>
+    const mountedApp = app.mount('#app');
+</script>
+</body>
+</html>
